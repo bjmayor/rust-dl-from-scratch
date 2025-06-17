@@ -8,3 +8,18 @@ ndarray = "0.16"
 ndarray-rand = "0.15"
 rand = "0.9"
 rand_distr = "0.5.1"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "loss_benchmark"
+harness = false
+
+[[bench]]
+name = "activation_benchmark"
+harness = false
+
+[[bench]]
+name = "network_benchmark"
+harness = false
