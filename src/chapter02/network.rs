@@ -1,10 +1,11 @@
 // src/chapter02/network.rs
-use super::activation::{sigmoid, softmax, sigmoid_matrix, softmax_matrix};
+use super::activation::{sigmoid, sigmoid_matrix, softmax, softmax_matrix};
 use super::matrix::Matrix;
-use ndarray::{Array2, Array};
+use ndarray::{Array, Array2};
 use ndarray_rand::RandomExt;
 use ndarray_rand::rand_distr::Normal;
 
+#[derive(Clone)]
 pub struct SimpleNet {
     pub w1: Array2<f64>,
     pub b1: Array2<f64>,
@@ -44,7 +45,7 @@ impl SimpleNetMatrix {
     pub fn new(input_size: usize, hidden_size: usize, output_size: usize) -> Self {
         use rand::rng;
         use rand_distr::Distribution;
-        
+
         let mut rng = rng();
         let normal = rand_distr::Normal::new(0.0, 1.0).unwrap();
 

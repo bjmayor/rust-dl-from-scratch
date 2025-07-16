@@ -1,9 +1,13 @@
 // src/chapter02/grad.rs
-use ndarray::{Array, Dimension, Ix1, Ix2, NdIndex, arr1, arr2};
+use ndarray::{Array, Dimension, NdIndex};
+
+#[cfg(test)]
+use ndarray::{Ix1, Ix2, arr1, arr2};
 
 const H: f64 = 1e-4;
 
 /// 对一个 f64 标量函数求导
+#[allow(dead_code)]
 pub fn numerical_diff<F>(f: F, x: f64) -> f64
 where
     F: Fn(f64) -> f64,
