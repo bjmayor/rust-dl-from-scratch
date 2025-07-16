@@ -8,6 +8,7 @@ ndarray = "0.16"
 ndarray-rand = "0.15"
 rand = "0.9"
 rand_distr = "0.5.1"
+plotters = "0.3"
 
 [dev-dependencies]
 criterion = "0.5"
