@@ -9,6 +9,9 @@ ndarray-rand = "0.15"
 rand = "0.9"
 rand_distr = "0.5.1"
 plotters = "0.3"
+flate2 = "1.0"
+byteorder = "1.5"
+reqwest = { version = "0.11", features = ["blocking"] }
 
 [dev-dependencies]
 criterion = "0.5"
